@@ -1,181 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#6F4E37">
-  <title>Ads+ — Discover Ads+</title>
-  <style>
-    :root {
-      --lavender: #E6E0F0;
-      --platinum: #E5E4E2;
-      --coffee: #6F4E37;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: var(--lavender);
-      color: var(--coffee);
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 7%;
-      background: var(--platinum);
-      border-bottom: 1px solid var(--coffee);
-    }
-
-    .brand {
-      font-size: 27px;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    nav a {
-      color: var(--coffee);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 85px 7% 60px;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 9px 14px;
-      background: var(--platinum);
-      border: 1px solid var(--coffee);
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    h1 {
-      max-width: 760px;
-      margin: 25px 0;
-      font-size: clamp(44px, 9vw, 82px);
-      line-height: 1.04;
-      letter-spacing: -3px;
-    }
-
-    p {
-      max-width: 620px;
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 15px 22px;
-      border: 2px solid var(--coffee);
-      border-radius: 10px;
-      background: var(--coffee);
-      color: var(--platinum);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .button.secondary {
-      background: var(--platinum);
-      color: var(--coffee);
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 65px;
-    }
-
-    .feature {
-      padding: 25px;
-      border: 1px solid var(--coffee);
-      border-radius: 16px;
-      background: var(--platinum);
-    }
-
-    .feature h2 { font-size: 21px; }
-
-    .feature p {
-      margin-bottom: 0;
-      font-size: 15px;
-    }
-
-    footer {
-      padding: 25px 7%;
-      border-top: 1px solid var(--coffee);
-      background: var(--platinum);
-      text-align: center;
-      line-height: 1.8;
-    }
-
-    footer a { color: var(--coffee); }
-
-    @media (max-width: 500px) {
-      main { padding-top: 55px; }
-      h1 { letter-spacing: -2px; }
-      header { padding: 18px 6%; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#E6E0F0">
+<meta name="description" content="Discover Ads+, download the browser extension and follow the installation guide.">
+<title>Ads+ — Your Browser, Your Experience</title>
+<style>
+:root{--lav:#E6E0F0;--plat:#E5E4E2;--coffee:#6F4E37;--ink:#30251f;--muted:#70645c;--line:#6f4e3733;--paper:#fffdfa}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+body{margin:0;background:var(--lav);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}
+a{color:inherit}
+.container{width:min(1120px,90%);margin-inline:auto}
+header{background:var(--plat);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px;padding-block:12px}
+.brand{font-size:clamp(24px,3vw,30px);font-weight:900;letter-spacing:-1.5px;text-decoration:none}
+.brand span,h1 em{color:var(--coffee);font-style:normal}
+nav{display:flex;flex-wrap:wrap;gap:clamp(12px,2.5vw,26px)}
+nav a{font-size:14px;font-weight:750;text-decoration:none}
+nav a:hover,footer a:hover{text-decoration:underline}
+.hero{padding-block:clamp(54px,9vw,112px) clamp(42px,7vw,76px)}
+.tag{display:inline-block;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:#fff9;font-size:12px;font-weight:850;letter-spacing:1.1px;color:var(--coffee)}
+h1{max-width:850px;margin:22px 0;font-size:clamp(2.6rem,7.6vw,5.8rem);line-height:1.04;letter-spacing:clamp(-4px,-.35vw,-1.5px);overflow-wrap:break-word}
+.lead{max-width:680px;color:var(--muted);font-size:clamp(1rem,1.7vw,1.2rem)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
+.btn{display:inline-flex;align-items:center;justify-content:center;max-width:100%;min-height:48px;padding:12px 19px;border:1px solid var(--coffee);border-radius:12px;background:var(--coffee);color:white;text-decoration:none;font-weight:800;font-size:14px;text-align:center;overflow-wrap:anywhere;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 7px 20px #6f4e3726}
+.btn.secondary{background:var(--paper);color:var(--coffee)}
+.note{max-width:710px;color:var(--muted);font-size:13px;margin-top:16px}
+section{padding-block:clamp(40px,6vw,70px)}
+.eyebrow{color:var(--coffee);font-size:12px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
+.section-head{max-width:700px;margin-bottom:25px}
+h2{font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1.16;letter-spacing:-1px;margin:8px 0 12px}
+.section-head>p,.card p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:clamp(12px,2vw,19px)}
+.card{min-width:0;padding:clamp(19px,3vw,27px);border:1px solid var(--line);border-radius:20px;background:#fff9}
+.num{display:grid;place-items:center;width:38px;aspect-ratio:1;border-radius:11px;background:var(--coffee);color:white;font-weight:900}
+.card h3{font-size:19px;margin:15px 0 6px}
+.card p{font-size:14px;margin:0}
+.panel{padding:clamp(19px,4vw,42px);border:1px solid var(--line);border-radius:23px;background:var(--plat)}
+.steps{display:grid;gap:18px;padding:0;list-style:none;counter-reset:step}
+.steps li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start}
+.stepnum{display:grid;place-items:center;width:32px;aspect-ratio:1;border-radius:10px;background:var(--coffee);color:white;font-weight:850}
+.steps p{margin:4px 0 0;color:var(--muted)}
+code{padding:2px 6px;border-radius:5px;background:#d5ccc4;overflow-wrap:anywhere}
+.callout{margin-top:22px;padding:14px 16px;border-left:3px solid var(--coffee);background:#fff9;color:var(--muted);font-size:13px}
+.cta{padding:clamp(22px,4vw,36px);border-radius:22px;background:var(--coffee);color:white}
+.cta h2{margin-top:0}
+.cta p{color:#f2e9e2}
+.cta .btn{background:var(--plat);color:var(--coffee);border-color:var(--plat)}
+footer{margin-top:35px;padding-block:25px;background:var(--plat);border-top:1px solid var(--line)}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+footer p{margin:0;color:var(--muted);font-size:13px}
+footer a{font-size:13px;font-weight:750}
+@media(max-width:620px){
+ .container{width:92%}
+ .nav{align-items:flex-start;flex-direction:column;gap:8px}
+ nav{width:100%;gap:10px 17px}
+ nav a{font-size:13px}
+ .actions{align-items:stretch}
+ .actions .btn{flex:1 1 100%;width:100%}
+ .foot{align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="brand">Ads+</div>
-    <nav><a href="#features">Features</a></nav>
-  </header>
-
-  <main>
-    <span class="tag">INTRODUCING ADS+</span>
-    <h1>Discover a smarter way to explore Ads+.</h1>
-    <p>
-      Meet Ads+, a browser extension project designed to display
-      customizable promotional content on supported websites.
-      Explore the features and follow the project as it grows.
-    </p>
-
-    <div class="actions">
-      <a class="button" href="https://github.com/shouryepratapsing/adsplus-extension-v5">
-        View Extension
-      </a>
-      <a class="button secondary" href="#features">Explore Features</a>
-    </div>
-
-    <section class="features" id="features">
-      <article class="feature">
-        <h2>Simple by Design</h2>
-        <p>A clean, focused experience with customizable settings.</p>
-      </article>
-      <article class="feature">
-        <h2>Flexible Settings</h2>
-        <p>Explore the extension's configuration options.</p>
-      </article>
-      <article class="feature">
-        <h2>Built for Browsers</h2>
-        <p>Manifest V3 extension project for supported browsers.</p>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <strong>Ads+</strong><br>
-    Learn more about the project on
-    <a href="https://github.com/shouryepratapsing/adsplus-extension-v5">GitHub</a>.<br>
-    <a href="https://adsplusprof.me/">adsplusprof.me</a>
-  </footer>
+<header>
+ <div class="container nav">
+  <a class="brand" href="#home" aria-label="Ads+ home">Ads<span>+</span></a>
+  <nav aria-label="Main navigation">
+   <a href="#features">Features</a><a href="#tutorial">Tutorial</a><a href="#install">Install</a><a href="#configure">Configure</a>
+  </nav>
+ </div>
+</header>
+<main id="home">
+ <div class="container hero">
+  <span class="tag">MEET ADS+ · BROWSER EXTENSION</span>
+  <h1>A more thoughtful way to experience <em>Ads+.</em></h1>
+  <p class="lead">Explore a browser extension with a clean interface, flexible settings and a straightforward setup experience.</p>
+  <div class="actions">
+   <a class="btn" href="https://github.com/shouryepratapsing/adsplus-extension-v5/archive/refs/heads/main.zip">Download Extension ZIP ↗</a>
+   <a class="btn secondary" href="#install">How to install</a>
+  </div>
+  <p class="note">Manual installation currently requires a compatible desktop browser. This website cannot silently install an extension.</p>
+ </div>
+ <section id="features">
+  <div class="container">
+   <div class="section-head"><span class="eyebrow">Why Ads+</span><h2>Simple to explore. Easy to configure.</h2><p>Discover the project and learn how to set up the extension in a supported browser.</p></div>
+   <div class="grid">
+    <article class="card"><div class="num">01</div><h3>Simple by design</h3><p>A clean, focused interface designed to be easy to understand.</p></article>
+    <article class="card"><div class="num">02</div><h3>Flexible settings</h3><p>Explore available preferences and configuration options after installation.</p></article>
+    <article class="card"><div class="num">03</div><h3>Browser-focused</h3><p>A Manifest V3 extension project for compatible desktop browsers.</p></article>
+   </div>
+  </div>
+ </section>
+ <section id="tutorial">
+  <div class="container">
+   <div class="section-head"><span class="eyebrow">Tutorial</span><h2>Get started with Ads+</h2><p>Use this quick guide to install the extension. A video tutorial can be added here later.</p></div>
+   <div class="panel">
+    <strong>Quick setup guide</strong>
+    <ol class="steps">
+     <li><span class="stepnum">1</span><div><strong>Download the ZIP</strong><p>Choose Download Extension ZIP above and save the archive.</p></div></li>
+     <li><span class="stepnum">2</span><div><strong>Extract the archive</strong><p>Unzip it into a folder on your computer. Keep the extracted files together.</p></div></li>
+     <li><span class="stepnum">3</span><div><strong>Open extension settings</strong><p>In desktop Chrome, open <code>chrome://extensions</code> and enable Developer mode.</p></div></li>
+     <li><span class="stepnum">4</span><div><strong>Load the extension</strong><p>Select Load unpacked and choose the extracted folder containing <code>manifest.json</code>.</p></div></li>
+     <li><span class="stepnum">5</span><div><strong>Open Ads+</strong><p>Use the extension icon in your browser toolbar and review its available options.</p></div></li>
+    </ol>
+    <div class="callout">This manual setup guide is for compatible desktop browsers. Chrome on Android does not support this standard desktop extension installation flow.</div>
+   </div>
+  </div>
+ </section>
+ <section id="install">
+  <div class="container">
+   <div class="cta"><span class="eyebrow" style="color:#f0dfd1">Ready to begin?</span><h2>Install Ads+ on your desktop browser.</h2><p>Download the project archive, extract it, then load the unpacked folder from your browser's extension settings.</p>
+    <div class="actions"><a class="btn" href="https://github.com/shouryepratapsing/adsplus-extension-v5/archive/refs/heads/main.zip">Download Extension ZIP ↗</a><a class="btn secondary" href="https://github.com/shouryepratapsing/adsplus-extension-v5">View source on GitHub</a></div>
+   </div>
+  </div>
+ </section>
+ <section id="configure">
+  <div class="container">
+   <div class="section-head"><span class="eyebrow">Configuration</span><h2>Your extension, your settings.</h2><p>Manage the installed extension through your browser. Open the browser's extension manager and select Ads+ details to find any options available in the installed version.</p></div>
+   <div class="actions"><a class="btn secondary" href="https://github.com/shouryepratapsing/adsplus-extension-v5">Extension repository</a><a class="btn secondary" href="https://github.com/shouryepratapsing/adsplus-extension-v5/blob/main/options.html">Options page source</a></div>
+  </div>
+ </section>
+</main>
+<footer>
+ <div class="container foot"><div><strong>Ads+</strong><p>Explore the browser extension project.</p></div><div><a href="https://github.com/shouryepratapsing/adsplus-extension-v5">GitHub</a> · <a href="https://adsplusprof.me/">adsplusprof.me</a></div></div>
+</footer>
 </body>
 </html>
